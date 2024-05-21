@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnjplodmgyxok"]
+
+[ext_resource type="PackedScene" uid="uid://gyi1px3rxi1v" path="res://tile asset/water.gltf" id="1_77qwq"]
+[ext_resource type="PackedScene" uid="uid://b375efgsfygl6" path="res://tile asset/sand.gltf" id="2_3qlyb"]
+[ext_resource type="PackedScene" uid="uid://bo72su5emxb7r" path="res://tile asset/grass.gltf" id="3_ml7fp"]
+[ext_resource type="PackedScene" uid="uid://c0b3johyme10l" path="res://tile asset/forest.gltf" id="4_oi8ea"]
+[ext_resource type="PackedScene" uid="uid://6vamdk7ovbnp" path="res://tile asset/rail 180.gltf" id="5_3xpcf"]
+[ext_resource type="PackedScene" uid="uid://cboju2d07pal" path="res://tile asset/rail 90 1.gltf" id="6_nhdix"]
+[ext_resource type="PackedScene" uid="uid://c5c0iqud5owtk" path="res://tile asset/rail 90 2.gltf" id="7_dh6c1"]
+[ext_resource type="PackedScene" uid="uid://dg6awi01xt2gs" path="res://tile asset/rail 90 3.gltf" id="8_1bfxs"]
+[ext_resource type="PackedScene" uid="uid://dd4tyl4rks0re" path="res://tile asset/rail 90 4.gltf" id="9_d0vo6"]
+[ext_resource type="PackedScene" uid="uid://cliu07k2it7rq" path="res://tile asset/rail 90 5.gltf" id="10_1g4oe"]
+
+[node name="Library ver2" type="Node3D"]
+
+[node name="water" parent="." instance=ExtResource("1_77qwq")]
+
+[node name="sand" parent="." instance=ExtResource("2_3qlyb")]
+
+[node name="grass" parent="." instance=ExtResource("3_ml7fp")]
+
+[node name="forest" parent="." instance=ExtResource("4_oi8ea")]
+
+[node name="rail 180" parent="." instance=ExtResource("5_3xpcf")]
+
+[node name="rail 90 1" parent="." instance=ExtResource("6_nhdix")]
+
+[node name="rail 90 2" parent="." instance=ExtResource("7_dh6c1")]
+
+[node name="rail 90 3" parent="." instance=ExtResource("8_1bfxs")]
+
+[node name="rail 90 4" parent="." instance=ExtResource("9_d0vo6")]
+
+[node name="rail 90 5" parent="." instance=ExtResource("10_1g4oe")]

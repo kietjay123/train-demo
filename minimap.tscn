@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ofhikq4b3eo"]
+
+[ext_resource type="Texture2D" uid="uid://dv7p0xtgbu1d2" path="res://asset/minimapborder.png" id="1"]
+[ext_resource type="Script" path="res://script/minimap.gd" id="3"]
+
+[node name="mnmapmargin" type="MarginContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+script = ExtResource("3")
+
+[node name="border" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="mnmapmargin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="mnmapmargin"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="mnmapmargin"]
+offset = Vector2(59, 59)
+region_enabled = true
+region_rect = Rect2(10, 10, 114, 114)

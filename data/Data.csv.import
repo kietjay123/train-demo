@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c3dbps8wqrwmd"
+
+[deps]
+
+files=["res://data/Data.type.translation", "res://data/Data.name.translation", "res://data/Data.health.translation", "res://data/Data.damage.translation", "res://data/Data.armor pen .translation", "res://data/Data.accuracy.translation", "res://data/Data.rate of fire.translation", "res://data/Data.burst duration.translation", "res://data/Data.recovery speed.translation", "res://data/Data.supression.translation", "res://data/Data.size.translation", "res://data/Data.effective range .translation", "res://data/Data.max range .translation", "res://data/Data.accuracy drop off.translation", "res://data/Data.speard range.translation", "res://data/Data.spread accuracy.translation", "res://data/Data.aoe range.translation", "res://data/Data.aoe damage.translation"]
+
+source_file="res://data/Data.csv"
+dest_files=["res://data/Data.type.translation", "res://data/Data.name.translation", "res://data/Data.health.translation", "res://data/Data.damage.translation", "res://data/Data.armor pen .translation", "res://data/Data.accuracy.translation", "res://data/Data.rate of fire.translation", "res://data/Data.burst duration.translation", "res://data/Data.recovery speed.translation", "res://data/Data.supression.translation", "res://data/Data.size.translation", "res://data/Data.effective range .translation", "res://data/Data.max range .translation", "res://data/Data.accuracy drop off.translation", "res://data/Data.speard range.translation", "res://data/Data.spread accuracy.translation", "res://data/Data.aoe range.translation", "res://data/Data.aoe damage.translation"]
+
+[params]
+
+compress=true
+delimiter=0

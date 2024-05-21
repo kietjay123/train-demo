@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=2 format=3 uid="uid://c38hdhv2va5h1"]
+
+[ext_resource type="Script" path="res://scenes/Unit.gd" id="1_i8w65"]
+
+[resource]
+script = ExtResource("1_i8w65")
+name = "Militia"
+health = 100

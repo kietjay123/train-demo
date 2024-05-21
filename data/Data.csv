@@ -1,0 +1,3 @@
+id,type,name,health,damage,armor pen ,accuracy,rate of fire,burst duration,recovery speed,supression,size,effective range ,max range ,accuracy drop off,speard range,spread accuracy,aoe range,aoe damage
+1,normal,machine gun,50,10,1,0.5,750,30,0.5,0.01,1,70,180,0.04,0.4,0.8,0,0
+2,platform,su23 2,100,30,3,0.35,2000,50,1,0.05,1,160,250,0.03,2,0.5,3,1

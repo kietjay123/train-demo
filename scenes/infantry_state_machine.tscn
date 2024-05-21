@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxoiavi4p164m"]
+
+[ext_resource type="Script" path="res://script/state script/infantryStateMachine.gd" id="1_hnj5a"]
+[ext_resource type="Script" path="res://script/state script/movingState.gd" id="2_ubptv"]
+[ext_resource type="Script" path="res://script/state script/sentryState.gd" id="3_kdjoi"]
+
+[node name="infantry State Machine" type="Node" node_paths=PackedStringArray("startingState")]
+script = ExtResource("1_hnj5a")
+startingState = NodePath("sentry State")
+
+[node name="moving State" type="Node" parent="." node_paths=PackedStringArray("sentryState")]
+script = ExtResource("2_ubptv")
+sentryState = NodePath("../sentry State")
+
+[node name="sentry State" type="Node" parent="." node_paths=PackedStringArray("movingState")]
+script = ExtResource("3_kdjoi")
+movingState = NodePath("../moving State")
