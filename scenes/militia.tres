@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_i8w65")
-name = "Militia"
+type = "militia"
 health = 100
+squad = -1
+radius = 2.0

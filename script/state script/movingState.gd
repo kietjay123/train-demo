@@ -1,8 +1,7 @@
 extends State
 
 
-var pos : Vector2
-var orientaion : float
+#general movement stuff
 var desiredVel : Vector2 = Vector2.ZERO
 var vel : Vector2
 var acceleration : Vector2
@@ -10,6 +9,9 @@ var maxForce : float = 0.5
 var maxSpeed : float = 1
 var pathRadius = 8
 var path : PackedVector2Array
+#boids stuff
+var perceptionRangeSquared : int = 100
+var desiredSeparation : int  = parent.stats
 
 var pathIdx := 0
 
@@ -103,3 +105,26 @@ func pathFollow(pPath : PackedVector2Array) -> Vector2 :
 func vector3To2(input : Vector3) -> Vector2 :
 	return Vector2(input.x, input.z)
 
+
+
+func seperation(squadPos : Array[Vector2]) -> Vector2 :
+	var result : Vector2 = Vector2.ZERO
+	var seeableMember : Array[Vector2] = squadPos.filter(
+		func(input : Vector2):
+			if (input.distance_squared_to(vector3To2(parent.position)) < perceptionRangeSquared) :
+				return true
+			return false
+	)
+	
+	if (!seeableMember.is_empty()) :
+		for i in seeableMember :
+			result += vector3To2(parent.position) - i
+		result = result / seeableMember.size()
+	
+	return result
+
+
+
+func cohere(squadPos : Array[Vector2]) -> Vector2 :
+	var result : Vector2 = Vector2.ZERO
+	return result

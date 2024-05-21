@@ -2,7 +2,7 @@ class_name Infantry
 extends Node3D
 
 @onready var stateMachine = $"infantry State Machine"
-@export var stats : Resource 
+@export var stats : Unit 
 
 var path : PackedVector2Array = []
 

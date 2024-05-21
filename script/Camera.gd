@@ -1,7 +1,7 @@
 extends Camera3D
 
 
-@onready var screenSize : Vector2 = get_viewport().size
+@onready var screenSize : Vector2 = Vector2(ProjectSettings.get_setting("display/window/size/viewport_width"), ProjectSettings.get_setting("display/window/size/viewport_height"))
 @export var camSpeed : float = 300
 var isMoving : bool = false
 var direction : Vector2
