@@ -76,8 +76,22 @@ func getPath(pFrom : Vector2i, pTo : Vector2i) -> PackedVector2Array :
 
 
 
-func groupNavRand(input : PackedVector2Array) -> Array[PackedVector2Array] :
-	var result : Array[PackedVector2Array] = []
+func getGroupMid(squadIndex : int) -> Vector2i :
+	var result : Vector2i = Vector2i.ZERO
+	var membersPos : Array[Vector2]  = squadIndexer[squadIndex]["members"].map(
+		func(member) :
+			var temp : Vector3 = member.position
+			return Vector2(temp.x, temp.z)
+	)
+	var xArray : Array[float] = membersPos.map(
+		func(pos) :
+			return pos.x
+	)
+	var yArray : Array[float] = membersPos.map(
+		func(pos) :
+			return pos.y
+	)
+	result = Vector2((xArray.max() - xArray.min()) / 2, (yArray.max() - yArray.min()) / 2)
 	return result
 
 
