@@ -65,7 +65,7 @@ func arrival(des : Vector2) -> Vector2 :
 
 
 func pathFollow(pPath : PackedVector2Array) -> Vector2 :
-	if (pPath.size() <= 1) :
+	if (pPath.size() == 1) :
 		return Vector2.ZERO
 	if (pathIdx == pPath.size() - 2) :
 		return arrival(pPath[-1])
@@ -106,28 +106,39 @@ func vector3To2(input : Vector3) -> Vector2 :
 
 
 
-func caculate(squadPos : Array[Vector2]) -> Array[Vector2] :
+func calNeighboor(squadPos : Array[Vector2]) -> void :
 	seeableMember = squadPos.filter(
 		func(input : Vector2):
 			if (input.distance_squared_to(vector3To2(parent.position)) < perceptionRangeSquared) :
 				return true
 			return false
 	)
-	return seeableMember 
-
 
 
 func seperation(squadPos : Array[Vector2]) -> Vector2 :
-	var result : Vector2 = Vector2.ZERO
+	var steeringForce : Vector2 = Vector2.ZERO
 	if (!seeableMember.is_empty()) :
 		for i in seeableMember :
-			result += vector3To2(parent.position) - i
-		result = result / seeableMember.size()
-	return result
-
+			steeringForce += vector3To2(parent.position) - i
+		steeringForce = steeringForce / seeableMember.size()
+		steeringForce -= vel
+	return steeringForce
 
 
 
 func cohere(squadPos : Array[Vector2]) -> Vector2 :
+	var steeringForce : Vector2 = Vector2.ZERO
+	if (!seeableMember.is_empty()) :
+		for i in seeableMember :
+			steeringForce += i
+		steeringForce = steeringForce / seeableMember.size()
+		steeringForce -= vel
+	return steeringForce
+
+
+func motionMixing() -> Vector2 :
 	var result : Vector2 = Vector2.ZERO
 	return result
+
+
+#added this
